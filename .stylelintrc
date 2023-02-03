@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-css-modules",
+    "stylelint-config-rational-order",
+    "stylelint-prettier/recommended"
+  ],
+  "plugins": ["stylelint-scss", "stylelint-order"],
+  "rules": {
+    "color-hex-case": "lower",
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": null,
+    "no-empty-source": null
+  },
+  "exclude": ["node_modules", "lib", "scripts", "src/**/*.stories.tsx", "storybook-static"]
+}

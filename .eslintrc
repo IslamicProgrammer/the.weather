@@ -1,0 +1,112 @@
+{
+  "plugins": ["prettier", "@typescript-eslint", "unused-imports", "simple-import-sort", "import", "cypress"],
+  "extends": ["airbnb-typescript", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "ignorePatterns": ["cypress.config.ts", "cypress/*"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    "import/no-cycle": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "react/button-has-type": "off",
+    "react/no-children-prop": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "class-methods-use-this": "off",
+    "no-param-reassign": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "no-return-assign": "off",
+    "global-require": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "arrow-body-style": ["error", "as-needed"],
+    "newline-after-var": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Side effect impor ts.
+          ["^\\u0000"],
+          // react
+          // Packages.
+          // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+          ["^react$", "^react-dom$", "^react-router$", "^react-router-dom$", "^@?\\w"],
+          ["^containers(/.*|$)"],
+          ["^hooks(/.*|$)"],
+          ["^components(/.*|$)"],
+          // Config import
+          ["^assets(/.*|$)"],
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // images imports
+          ["^.+\\.(svg|jpg|png)$"],
+          // Style imports.
+          ["^.+\\.s?css$"],
+          ["^"]
+        ]
+      }
+    ],
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "unused-imports/no-unused-imports": "error",
+    "object-curly-spacing": ["warn", "always"],
+    "max-len": [
+      "warn",
+      {
+        "code": 140,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "react/jsx-key": "error",
+    "import/no-extraneous-dependencies": [
+      "off",
+      {
+        "devDependencies": ["**/*.test.js", "**/*.test.jsx", "**/*.test.ts", "**/*.test.tsx", "src/tests/**/*", "src/setupTests.ts"]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-boolean-value": "off",
+    "react/require-default-props": "off",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/destructuring-assignment": "off",
+    "react/no-unused-prop-types": "off",
+    "@typescript-eslint/comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "never"
+      }
+    ]
+  }
+}

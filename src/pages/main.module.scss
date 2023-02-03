@@ -1,0 +1,158 @@
+.wrapper {
+  display: flex;
+  // background: url('../assets/images/bg1.webp') no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  height: 100vh;
+  //   background: lightcoral;
+
+  .left {
+    padding: 50px 60px;
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 80px;
+
+    & h3 {
+      color: white;
+      font-weight: 400;
+    }
+
+    .info {
+      color: white;
+      display: flex;
+
+      .celsius {
+        font-size: 120px;
+      }
+
+      .location {
+        padding-top: 47px;
+        padding-left: 20px;
+        .title {
+          font-size: 40px;
+        }
+      }
+
+      .icons {
+        margin-left: 20px;
+        text-align: center;
+
+        & img {
+          width: 70px;
+        }
+
+        & p {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 0.3;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 70px;
+    position: relative;
+
+    .header {
+      height: 100px;
+      height: 100px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        width: 100%;
+        margin-right: 40px;
+        padding-bottom: 20px;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.6);
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      button {
+        height: 100px;
+        min-width: 100px;
+        background-color: #a8cee1;
+        border: none;
+        cursor: pointer;
+        transition: all 0.4s ease;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        & svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    .content {
+      padding-right: 70px;
+      font-size: 20px;
+
+      .divider {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.6);
+        margin: 50px 0;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      ul.other-locations {
+        li {
+          margin: 18px 0;
+          font-size: 18px;
+          cursor: pointer;
+          transition: all 0.4s ease;
+
+          &:hover {
+            color: white;
+          }
+        }
+
+        li.selected {
+          color: white;
+        }
+      }
+    }
+
+    .details {
+      & h5 {
+        color: white;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+
+      & ul {
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          span:last-child {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

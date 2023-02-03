@@ -1,0 +1,16 @@
+{
+  "**/*.{css,scss}": [
+    "yarn format",
+    "yarn stylelint",
+    "git add"
+  ],
+  "src/**/*.{js,jsx,ts,tsx}": [
+    "yarn format",
+    "yarn lint:fix",
+    "git add"
+  ],
+  "**/*.{json,ts,tsx,js,jsx,md,scss,css,html}": [
+    "yarn format",
+    "git add"
+  ]
+}
