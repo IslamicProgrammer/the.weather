@@ -1,1 +1,1 @@
-# Create with super-eslint-react template
+# The weather app
